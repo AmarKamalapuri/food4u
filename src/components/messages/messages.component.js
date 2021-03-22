@@ -11,7 +11,7 @@ function Messages(props) {
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    socketRef.current = socketIOClient("http://localhost:8000", {
+    socketRef.current = socketIOClient("https://foodnearus.herokuapp.com/", {
       query: { roomID: props.data.roomID },
     });
 

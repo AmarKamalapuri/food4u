@@ -22,7 +22,7 @@ const EditListingForm = () => {
   async function getData() {
     const res = await axios({
       method: "get",
-      url: "http://localhost:8000/listings/get/" + queryString.parse(window.location.search).id,
+      url: "https://foodnearus.herokuapp.com/listings/get/" + queryString.parse(window.location.search).id,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       }
@@ -46,7 +46,7 @@ const EditListingForm = () => {
   async function EditListing(data, restrictions) {
     const res = await axios({
       method: "put",
-      url: "http://localhost:8000/listings/update/" + queryString.parse(window.location.search).id,
+      url: "https://foodnearus.herokuapp.com/listings/update/" + queryString.parse(window.location.search).id,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
@@ -87,7 +87,7 @@ const EditListingForm = () => {
     formData.append("image", e.target.files[0]);
     axios({
       method: "post",
-      url: "http://localhost:8000/images/upload",
+      url: "https://foodnearus.herokuapp.com/images/upload",
       validateStatus: null,
       data: formData,
     }).then((res) => {

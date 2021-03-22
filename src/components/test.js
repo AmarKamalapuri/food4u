@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-image">
         <img
-          src={`http://localhost:8000/images/get/${data.image}`}
+          src={`https://foodnearus.herokuapp.com/images/get/${data.image}`}
           alt="Italian Trulli"
         />
         <span class="card-title">{title}</span>

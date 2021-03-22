@@ -42,7 +42,7 @@ export default class Login extends Component {
 
     const res = await axios({
       method: "post",
-      url: "http://localhost:8000/users/login",
+      url: "https://foodnearus.herokuapp.com/users/login",
       validateStatus: null,
       data: user,
     });

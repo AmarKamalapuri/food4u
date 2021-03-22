@@ -8,7 +8,7 @@ const Listings = (props) => {
   const [listings, setListings] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8000/listings/get").then((response) => {
+    axios.get("https://foodnearus.herokuapp.com/listings/get").then((response) => {
       setListings(response.data);
     });
   }, []);

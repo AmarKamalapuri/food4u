@@ -24,7 +24,7 @@ const ListingForm = () => {
     }
     const res = await axios({
       method: "post",
-      url: "http://localhost:8000/listings/add",
+      url: "https://foodnearus.herokuapp.com/listings/add",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },
@@ -40,7 +40,7 @@ const ListingForm = () => {
     console.log(postcode);
     const res = await axios({
       method: "post",
-      url: "http://localhost:8000/listing/location",
+      url: "https://foodnearus.herokuapp.com/listing/location",
       data: { post_code: postcode },
     });
     if (res.data.status === "OK") {
@@ -71,7 +71,7 @@ const ListingForm = () => {
     formData.append("image", e.target.files[0]);
     axios({
       method: "post",
-      url: "http://localhost:8000/images/upload",
+      url: "https://foodnearus.herokuapp.com/images/upload",
       validateStatus: null,
       data: formData,
     }).then((res) => {

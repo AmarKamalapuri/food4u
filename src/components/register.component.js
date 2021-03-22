@@ -51,7 +51,7 @@ export default class Register extends Component {
 
     const res = await axios({
       method: "post",
-      url: "http://localhost:8000/users/add",
+      url: "https://foodnearus.herokuapp.com/users/add",
       validateStatus: null,
       data: user,
     });

@@ -15,7 +15,7 @@ function MessagePage() {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:8000/chat/convos",
+      url: "https://foodnearus.herokuapp.com/chat/convos",
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
       },

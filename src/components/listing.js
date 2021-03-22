@@ -72,7 +72,7 @@ const Listing = (props) => {
   async function deleteListing() {
     const res = await axios({
       method: "delete",
-      url: "http://localhost:8000/listings/delete",
+      url: "https://foodnearus.herokuapp.com/listings/delete",
       validateStatus: null,
       headers: {
         Authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -124,7 +124,7 @@ const Listing = (props) => {
   const startChat = async () => {
     const newChat = await axios({
       method: "post",
-      url: "http://localhost:8000/chat/newconvo",
+      url: "https://foodnearus.herokuapp.com/chat/newconvo",
       data: {
         contactID: data.user_id,
       },
@@ -153,7 +153,7 @@ const Listing = (props) => {
               <img
                 class="col-xs-2"
                 style={{ width: "8%", height: "6%", borderRadius: "10px" }}
-                src={`http://localhost:8000/images/get/${data.image}`}
+                src={`https://foodnearus.herokuapp.com/images/get/${data.image}`}
                 alt="Italian Trulli"
               ></img>
 
@@ -293,7 +293,7 @@ const Listing = (props) => {
                   borderRadius: "10px",
                   objectFit: "fill",
                 }}
-                src={`http://localhost:8000/images/get/${data.image}`}
+                src={`https://foodnearus.herokuapp.com/images/get/${data.image}`}
                 alt="Italian Trulli"
               ></img>
             </div>
