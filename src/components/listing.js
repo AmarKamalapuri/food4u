@@ -133,7 +133,7 @@ const Listing = (props) => {
       },
     });
 
-    window.location = `/chat?open=${newChat.data.roomID}`;
+    window.location = `https://foodnearus.herokuapp.com/chat?open=${newChat.data.roomID}`;
   };
 
   return (
